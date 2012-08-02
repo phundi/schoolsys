@@ -1,0 +1,46 @@
+<h1>GG SEC SCHOOL</h1>
+ 
+<% @forms.each do |form| %>
+  <div class ="entry">
+<table border = 10 width = 100% height = 100%>
+     <tr> 
+        <td class = "col1"><dl>
+           <dt class = "ft"><%=h @formname =form.name %></dt>
+         <% if @user.login_name == 'admin' %>
+           <dt> <%= link_to 'Edit', edit_form_path(form)%></dt>
+         <% end %>
+        </dl></td>
+      <td > 
+	<dl>
+           <dt><%=h "With " + (Student.find(:all, :conditions => {:form_id => [form.id]})).size.to_s + " students" %> </dt>
+              <dt><%= "Class Leader : " + (Student.find(form.form_leader_id)).first_name %>
+              <%=" " + (Student.find(form.form_leader_id)).surname%>   </dt>
+              <dt><%= "Form Teacher :" + (Teacher.find(form.form_teacher_id)).first_name %>
+              <%= " " + (Teacher.find(form.form_teacher_id)).initial + ". " %>
+              <%= " " + (Teacher.find(form.form_teacher_id)).surname %> </dt>  
+        </dl>
+
+      </td>
+      <td  class ="col3">
+         <dl>
+           <dt><%= "Class Leader" %></dt>
+           <dt><%= image_tag (Student.find(form.form_leader_id)).image_url%></dt>
+         </dt>
+      </td>
+      <td  class ="col3">
+         <dl>
+           <dt ><%= "Form Teacher" %></dt>
+           <dt><%= image_tag "/images/judithhmwayiwawo.jpg"%></dt>
+      </td>
+      
+        </tr>
+</table>
+  </div>
+<% end %>
+<script type="text/javascript">
+		<% if Punishment.find_by_due_date(Date.today) %>
+                   alert( "SOME STUDENT PUNISHMENTS ARE DUE TODAY")
+                <% end %>
+	</script>
+
+

@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  mathematics: 1
+  english: 1
+  chichewa: 1
+  physical_science: 1
+  biology: 1
+  computer_studies: 1
+  student_id: 1
+
+two:
+  id: 
+  mathematics: 1
+  english: 1
+  chichewa: 1
+  physical_science: 1
+  biology: 1
+  computer_studies: 1
+  student_id: 1

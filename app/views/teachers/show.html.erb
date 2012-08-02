@@ -1,0 +1,38 @@
+<p>
+  <b>Id:</b>
+  <%=h @teacher.id %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%=h @teacher.first_name %>
+</p>
+
+<p>
+  <b>Initial:</b>
+  <%=h @teacher.initial %>
+</p>
+
+<p>
+  <b>Surname:</b>
+  <%=h @teacher.surname %>
+</p>
+
+<p>
+  <b>Date of birth:</b>
+  <%=h @teacher.date_of_birth %>
+</p>
+
+<p>
+  <b>Marital status:</b>
+  <%=h @teacher.marital_status %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%=h @teacher.subject_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
+<%= link_to 'Back', teachers_path %>

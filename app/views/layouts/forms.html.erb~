@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>SCHOOL INFOMATION SYSTEM%></title>
+  <%= stylesheet_link_tag 'scaffold','student' %>
+</head>
+<body id="form">
+	<div id="banner">
+		<%=image_tag("logo.jpg")%>                
+	</div>
+			<div id="columns">
+				<div id="side">
+                                        
+					<%=link_to "Home", :controller=> "forms", :action => "index" %>
+					<div id="logout">
+
+                                          <% if session[:id]%>
+                                           <%=link_to 'logout', :controller => 'users', :action => 'logout'%>
+					<% else %>
+						<% end %>
+                                        </div>
+                                 </div>
+       <div id= common-lists>
+		<%= link_to "Students", :controller => "students", :action=> "index" %>
+                <%= link_to "Teachers", :controller => "teachers", :action=> "index" %>
+                <%= link_to "Results", :controller => "results", :action =>"index" %>                
+                <%= link_to "Punishments", :controller => "punishments", :action =>"index" %><br>
+               <style type= 'text/css' rel = stylesheet>
+                 #mysubmitB {
+     			background: white;
+   			color:green;
+                        padding: 2px 2px 2px 2px;
+         		font-weight:bold;                                 
+     			}
+                 #search-field {
+                        color:gray;
+                        font-weight:bold;
+                        }
+                </style>
+       <% if session[:id] %>
+
+            <% form_tag :controller => params[:controller], :action => 'search', :method => 'get' do %>
+           <%= text_field_tag :search, params[:search], :id => 'search-field' %>
+           <%= submit_tag "SEARCH", :name => nil, :id =>'mysubmitB' %> 
+         <% end %> 
+       <% end %>
+       
+              
+  </div>
+</div>
+       </div>					                            
+			<div id = "main">                                          
+			<%= yield :layout %>
+	                </div>
+                        
+                        
+	</div>
+        
+  </body>
+</html>

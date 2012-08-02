@@ -1,0 +1,44 @@
+<p>
+  <b>Id:</b>
+  <%=h @result.id %>
+</p>
+
+<p>
+  <b>Mathematics:</b>
+  <%=h @result.mathematics %>
+</p>
+
+<p>
+  <b>English:</b>
+  <%=h @result.english %>
+</p>
+
+<p>
+  <b>Chichewa:</b>
+  <%=h @result.chichewa %>
+</p>
+
+<p>
+  <b>Physical science:</b>
+  <%=h @result.physical_science %>
+</p>
+
+<p>
+  <b>Biology:</b>
+  <%=h @result.biology %>
+</p>
+
+<p>
+  <b>Computer studies:</b>
+  <%=h @result.computer_studies %>
+</p>
+
+<p>
+  <b>Student:</b>
+  <%=h @result.student_id %>
+</p>
+
+<% if @user.login_name == 'admin' %>
+<%= link_to 'Edit', edit_result_path(@result) %> 
+<% end %>
+<%= link_to 'Back', results_path %>

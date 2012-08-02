@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  first_name: MyString
+  initial: MyString
+  surname: MyString
+  date_of_birth: 2012-07-20
+  marital_status: MyString
+  subject_id: 1
+
+two:
+  id: 
+  first_name: MyString
+  initial: MyString
+  surname: MyString
+  date_of_birth: 2012-07-20
+  marital_status: MyString
+  subject_id: 1

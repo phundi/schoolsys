@@ -1,0 +1,2 @@
+module StudentStatsControllerHelper
+end

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  name: MyString
+  form_teacher_id: 1
+  no_of_students: 1
+  form_leader_id: 1
+
+two:
+  id: 
+  name: MyString
+  form_teacher_id: 1
+  no_of_students: 1
+  form_leader_id: 1

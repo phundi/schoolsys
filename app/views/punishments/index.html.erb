@@ -1,0 +1,33 @@
+<html>	
+
+<h1>Punishments Index</h1>
+<div id = 'mytable'>
+<table border = 3px>
+<tr>
+ <th>Pun Code</th>
+ <th>Pun Status</th>
+ <th>Pun Description</th>
+ <th>Due Date</th>
+ <th>Subjects</th>
+</tr>
+ <% @punishments.each do |pun|%>
+<tr>   
+    <td><%=h pun.id%></td>
+    <td><%=h pun.status%></td>
+    <td><%= pun.description%></td>
+    <td><%= pun.due_date.to_s%></td>
+    <td>
+        <% pun_subjects = Student.find_all_by_punishmentId(pun.id) %>
+        <ul>
+          <% pun_subjects.each do |ps| %>
+            <li><%=h ps.first_name + ' ' + ps.initial + ' ' + ps.surname + ' [' + (Form.find(ps.form_id)).name + ']'%></li>
+          <% end %>   
+         <%if pun.status == 'active'%>
+            <%= link_to 'Claim Against Ruling'%>         
+         <% end %>
+</ul>
+    </td>
+</tr>
+<% end %>
+</table>
+</div>	   

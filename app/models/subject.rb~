@@ -1,0 +1,4 @@
+class Subject < ActiveRecord::Base
+belongs_to :Teacher
+has_many :Results
+end

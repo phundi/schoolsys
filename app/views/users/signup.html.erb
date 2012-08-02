@@ -1,0 +1,15 @@
+<html>
+<h1>Enter Details For A New User Account</h1>
+<body>
+
+<%= form_tag (:action => 'create')%>
+   USERNAME : <br><%= text_field "user", "login_name" %><br>
+   PASSWORD    :<br> <%= password_field "user", "login_password" %><br>
+   EMAIL ADDRESS   :<br><%= text_field "user", "email"%><br>
+   <%= submit_tag 'Create' %> <br>
+<%= link_to 'Login', :action => 'login'%><br>
+<font color = red>
+  <div><%= flash[:msg] %><div>
+<font color = white>
+ </body>
+</html>

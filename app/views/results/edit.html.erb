@@ -1,0 +1,40 @@
+<h1>Editing result</h1>
+
+<% form_for(@result) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :mathematics %><br />
+    <%= f.text_field :mathematics %>
+  </p>
+  <p>
+    <%= f.label :english %><br />
+    <%= f.text_field :english %>
+  </p>
+  <p>
+    <%= f.label :chichewa %><br />
+    <%= f.text_field :chichewa %>
+  </p>
+  <p>
+    <%= f.label :physical_science %><br />
+    <%= f.text_field :physical_science %>
+  </p>
+  <p>
+    <%= f.label :biology %><br />
+    <%= f.text_field :biology %>
+  </p>
+  <p>
+    <%= f.label :computer_studies %><br />
+    <%= f.text_field :computer_studies %>
+  </p>
+  <p>
+    <%= f.label :student_id %><br />
+    <%= f.text_field :student_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @result %> |
+<%= link_to 'Back', results_path %>

@@ -1,0 +1,33 @@
+<font color = gray>
+<h1>Editing Form</h1>
+
+<% form_for(@form) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :form_teacher_id %><br />
+    <%= f.text_field :form_teacher_id %>
+  </p>
+  <p>
+    <%= f.label :no_of_students %><br />
+    <%= f.text_field :no_of_students %>
+  </p>
+  <p>
+    <%= f.label :form_leader_id %><br />
+    <%= f.text_field :form_leader_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @form %> |
+<%= link_to 'Back', forms_path %>

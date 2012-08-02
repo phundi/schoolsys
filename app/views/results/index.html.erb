@@ -1,0 +1,39 @@
+<h1 align =left>GRADES INDEX </h1>
+<table border =3px> 
+
+<caption>GRADES</caption>
+
+  <tr>
+    <th>Id</th>
+    <th>Mathematics</th>
+    <th>English</th>
+    <th>Chichewa</th>
+    <th>Physical science</th>
+    <th>Biology</th>
+    <th>Computer studies</th>
+    <th>Student Id</th>
+  </tr>
+
+<% @results.each do |result| %>
+  <tr>
+    <td><%=h result.id %></td>
+    <td><%=h result.mathematics %></td>
+    <td><%=h result.english %></td>
+    <td><%=h result.chichewa %></td>
+    <td><%=h result.physical_science %></td>
+    <td><%=h result.biology %></td>
+    <td><%=h result.computer_studies %></td>
+    <td><%=h result.student_id %></td>
+    <td><%= link_to 'Show', result %></td>
+    <% if @user.login_name == 'admin' %>
+    <td><%= link_to 'Edit', edit_result_path(result) %></td>
+    <td><%= link_to 'Destroy', result, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<% if @user.login_name == 'admin' %>
+  <%= link_to 'New result', new_result_path %>
+<% end %>

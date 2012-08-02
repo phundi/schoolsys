@@ -1,0 +1,38 @@
+<h1>Teachers Index</h1>
+
+<table border = 3px cellspacing>
+  <tr>
+    <th>Id</th>
+    <th>First name</th>
+    <th>Initial</th>
+    <th>Surname</th>
+    <th>Date of birth</th>
+    <th>Marital status</th>
+    <th>Subject</th>
+  </tr>
+
+<% @teachers.each do |teacher| %>
+  <tr>
+    <td><%=h teacher.id %></td>
+    <td><%=h teacher.first_name %></td>
+    <td><%=h teacher.initial %></td>
+    <td><%=h teacher.surname %></td>
+    <td><%=h teacher.date_of_birth %></td>
+    <td><%=h teacher.marital_status %></td>
+    <td><%=h teacher.subject_id %></td>
+
+    <td><%= link_to 'Show', teacher %></td>
+
+    <% if (User.find(session[:id]).login_name == "admin") %>
+     <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
+    <td><%= link_to 'Destroy', teacher, :confirm => 'Are you sure?', :method => :delete %></td>
+    <%end%>
+  </tr>
+
+   <% end %>
+</table>
+
+<br />
+<% if (User.find(session[:id]).login_name == "admin") %>
+<%= link_to 'New teacher', new_teacher_path %>
+<% end %>

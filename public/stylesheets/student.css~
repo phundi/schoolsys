@@ -1,0 +1,310 @@
+#notice {
+border: 2px solid red;
+padding: 1em;
+margin-bottom: 2em;
+background-color: #f0f0f0 ;
+font: bold smaller sans-serif;
+}
+h1 {
+font: 200% Cambria;
+color: gray;
+border-bottom: 2px dotted #50d ;
+}
+#student-list table {
+border-collapse: collapse;
+}
+#student-list table tr td {
+padding: 5px;
+vertical-align: top;
+}
+#student-list .list-image {
+width:
+80PX;
+height:
+70px;
+}
+#student-list .list-name {
+width:
+100%;
+}
+#student-list .list-name dl {
+margin: 5px;
+}
+#student-list .list-name dt {
+#244 ;
+color:red
+font-weight: bold;
+font-size:
+larger;
+}
+#student-list .list-name dd {
+margin: 0;
+}
+#student-list .list-actions {
+font-size:
+x-small;
+text-align:
+padding-left: 1em;
+}
+#student-list .list-line-even {
+#e0f8f8 ;
+background:rgb(191,239,	255)
+}
+#student-list .list-line-odd {
+#f8b0f8 ;
+background: white
+}
+/* Styles for main page */
+#banner {
+background: #141;
+padding-top: 2px;
+padding-left: 2px;
+padding-bottom: 0px;
+border-bottom: 0px solid;
+font-size:15px;
+font: small-caps 40px/40px "Times New Roman", serif;
+color: #282 ;
+text-align: center;
+}
+#banner img {
+float: left;
+height: 50px;
+}
+#logout a{
+font-size: 17px;
+}
+#columns {
+background: #141 ;
+
+}
+#main{
+margin-left: 13em;
+padding-top: 4ex;
+padding-left: 2em;
+color:white;
+background :#141;
+
+}
+#bottom-col{
+float: left;
+background:#141;
+}
+#side {
+float: left;
+padding-top: 1em;
+padding-left: 1em;
+padding-bottom: 1em;
+width: 12em;
+background: #141;
+font-size: 20px;
+color: green;
+}
+#side a:hover{
+color:white;
+background: #141;
+}
+
+#common-lists {
+float:right;
+color:white;
+font-size: 17px;
+background: #141;
+width:22em;
+}
+#common-lists a:hover{
+color:white;
+background: #141;
+}
+/* An entry in the store catalog */
+#form .entry{
+overflow: auto;
+margin-top:0px;
+border-bottom: 0px;
+background:rgb(233,234,235);
+color: rgb(5,105,5);
+font-family: Cambria;
+font-size: 20px;
+font-weight: bold;
+height: 150px;
+}
+#form .entry .col1 {
+width:200px;
+}
+#form .entry .ft {
+font-size: 150%;
+color:rgb(5, 105, 5);
+font-weight: bold;
+}
+#form .entry .col3 {
+font-size:85%;
+font-weight: bold;
+color: gray;
+width:150px;
+}
+#form .entry .col4 {
+font-size:85%;
+font-weight: bold;
+color: gray;
+width: 110px;
+}
+#form .entry img {
+width: 125px;
+height: 90px;
+float: left;
+}
+#form .entry h3 {
+margin-top: 0;
+margin-bottom: 0px;
+color: rgb(5, 50, 5);
+}
+#form .entry p {
+margin-top: 0;
+margin-bottom: 0;
+}
+#form .entry {
+font-size:5px 0;
+margin-bottom: 0;
+}
+#form .entry .price-line {
+clear: both;
+}
+#form .entry .add-to-cart {
+position: relative;
+}
+#form.entry .price {
+color: #44a ;
+font-weight: bold;
+margin-right: 2em;
+}
+#form .entry form, #form .entry form div {
+display: inline;
+}
+/* Styles for the cart in the main page */
+.cart-title {
+font: 120% bold;
+}
+.item-price, .total-line {
+text-align: right;
+}
+.total-line .total-cell {
+font-weight: bold;
+border-top: 1px solid #595 ;
+}
+/* Styles for the cart in the sidebar */
+#ca rt, #ca rt table {
+font-size: smaller;
+color:
+white;
+}
+#ca rt table {
+border-top:
+1px dotted #595 ;
+border-bottom: 1px dotted #595 ;
+margin-bottom: 10px;
+}
+/* Styles for order form */
+.depot-form fieldset {
+background: #efe ;
+}
+.depot-form legend {
+color: #dfd ;
+background: #141 ;
+font-family: sans-serif;
+padding: 0.2em 1em;
+}
+.depot-form label {
+width: 5em;
+float: left;
+text-align: right;
+padding-top: 0.2em;
+margin-right: 0.1em;
+display: block;
+}
+.depot-form select, .depot-form textarea, .depot-form input {
+margin-left: 0.5em;
+}
+.depot-form .submit {
+margin-left: 4em;
+}
+.depot-form div {
+margin: 0.5em 0;
+}
+/* The error box */
+.fieldWithErrors {
+padding: 2px;
+background-color: #EEFFEE;
+display: inline;
+}
+.fieldWithErrors * {
+background-color:white;
+border: 1px solid red;
+}
+#e rrorExplanation {
+width: 400px;
+border: 2px solid blue;
+padding: 7px;
+padding-bottom: 12px;
+margin-bottom: 20px;
+background-color: #f0f0f0 ;
+}
+#e rrorExplanation h2 {
+text-align: left;
+font-weight: bold;
+padding: 5px 5px 5px 15px;
+font-size: 12px;
+margin: -7px;
+background-color: red;
+color: #fff ;
+}
+#e rrorExplanation p {
+color: red ;
+margin-bottom: 0;
+padding: 5px;
+
+}
+#e rrorExplanation ul li {
+font-size: 12px;
+list-style: square;
+background:#141;
+}
+.locale {
+float:right;
+padding-top: 0.2em
+}
+# login {
+background-color: #141;
+}
+#student-details {
+width:100%;
+background:#141;
+color:white;
+padding:5px 5px 5px 5px;
+}
+
+#student-details .student-listing-details p{
+border-color:gray;
+text-align:left;
+font-weight:bold;
+color:gray;
+font-size:20px;
+}
+#search {
+ float:top;
+background:#141;
+}
+#search .search-class{
+ float:top;
+ font-size:25px;
+ background:#141;
+ 
+}
+#mytable{
+float:center;
+width:100%;
+background:#141;
+font-size:14px;
+}
+#search-field {
+ color:#141;
+ background:white;
+}

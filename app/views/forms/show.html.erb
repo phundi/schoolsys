@@ -1,0 +1,28 @@
+<p>
+  <b>Id:</b>
+  <%=h @form.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @form.name %>
+</p>
+
+<p>
+  <b>Form teacher:</b>
+  <%=h @form.form_teacher_id %>
+</p>
+
+<p>
+  <b>No of students:</b>
+  <%=h @form.no_of_students %>
+</p>
+
+<p>
+  <b>Form leader:</b>
+  <%=h @form.form_leader_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_form_path(@form) %> |
+<%= link_to 'Back', forms_path %>

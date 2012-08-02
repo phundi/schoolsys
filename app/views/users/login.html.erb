@@ -1,0 +1,20 @@
+<html>
+<body>
+<font color=red>
+  <%=flash[:message]%>
+<font color= white>
+  <%= flash[:notice]%>
+  <%=link_to "Sign Up", :action => 'signup'%>
+<h2> ENTER YOUR USERNAME AND PASSWORD BELOW</h2>
+<font color= white>
+  <%= form_tag :action => 'process_login'%>
+   USERNAME : <br><%= text_field "user", "login_name"%><br>
+   PASSWORD    : <br><%= password_field "user", "login_password" %><br>
+  <%= submit_tag 'LOGIN' %>
+<font color=red size ="4">
+<blink><b>
+  <div id ="login_msg"'><%=flash[:error]%> <div>
+  </b>
+</blink>
+<body>
+<html>

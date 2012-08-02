@@ -1,0 +1,9 @@
+<h1>Punishment</h1>
+<%= form_tag (:action => "create_punishment") %>
+  Description:   <%= text_field "punishment", "description" %><br>
+  Status     :   <%= text_field "punishment", "status" %><br>
+  Due Date   :   <%= date_select "punishment", "due_date" %><br>
+ <%= submit_tag "create_punishment"%>
+<% end_form_tag %>
+<%=link_to "Home", :controller => 'forms' :action => 'index'%>
+  
